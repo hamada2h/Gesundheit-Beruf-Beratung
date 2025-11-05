@@ -1,0 +1,7 @@
+header {
+    background: url('images/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
