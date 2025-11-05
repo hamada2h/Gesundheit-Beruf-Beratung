@@ -2,13 +2,91 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gesundheit Beruf Beratung</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gesundheit Beruf Beratung</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0; padding: 0;
+        background: #f2f7fb;
+        color: #333;
+    }
+    header {
+        background: #007acc;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2em; }
+    nav { margin: 15px 0; text-align:center; }
+    nav button {
+        background: #fff;
+        border: 1px solid #007acc;
+        color: #007acc;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    nav button:hover { background: #007acc; color: #fff; }
+    main { max-width: 800px; margin: 40px auto; text-align: center; }
+    main p { font-size: 1.2em; margin-bottom: 20px; }
+    a.book {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        transition: 0.3s;
+    }
+    a.book:hover { background: #218838; }
+</style>
 </head>
 <body>
-    <h1>Willkommen bei Gesundheit Beruf Beratung</h1>
-    <p>Professionelle Beratungsdienste für Pflegekräfte, Ärzte und Physiotherapeuten, die in Deutschland arbeiten möchten.</p>
-    <a href="https://calendly.com/hamadahamza2020/30min" target="_blank">Termin buchen</a>
+<header>
+    <h1 id="title">Willkommen bei Gesundheit Beruf Beratung</h1>
+</header>
+
+<nav>
+    <button onclick="changeLanguage('de')">Deutsch</button>
+    <button onclick="changeLanguage('ar')">العربية</button>
+    <button onclick="changeLanguage('en')">English</button>
+</nav>
+
+<main>
+    <p id="description">Professionelle Beratungsdienste für Pflegekräfte, Ärzte und Physiotherapeuten, die in Deutschland arbeiten möchten.</p>
+    <a id="bookLink" class="book" href="https://calendly.com/hamadahamza2020/30min" target="_blank">Termin buchen</a>
+</main>
+
+<script>
+    const texts = {
+        de: {
+            title: "Willkommen bei Gesundheit Beruf Beratung",
+            description: "Professionelle Beratungsdienste für Pflegekräfte, Ärzte und Physiotherapeuten, die in Deutschland arbeiten möchten.",
+            book: "Termin buchen"
+        },
+        ar: {
+            title: "مرحبا بكم في استشارات المهن الصحية",
+            description: "خدمات استشارية للممرضين والأطباء وأخصائيي العلاج الطبيعي الراغبين في العمل بألمانيا.",
+            book: "احجز موعد"
+        },
+        en: {
+            title: "Welcome to Health Career Consulting",
+            description: "Professional consultation services for nurses, doctors, and physiotherapists who want to work in Germany.",
+            book: "Book Appointment"
+        }
+    };
+
+    function changeLanguage(lang) {
+        document.getElementById('title').innerText = texts[lang].title;
+        document.getElementById('description').innerText = texts[lang].description;
+        document.getElementById('bookLink').innerText = texts[lang].book;
+    }
+</script>
 </body>
 </html>
