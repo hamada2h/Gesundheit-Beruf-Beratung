@@ -98,3 +98,103 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ار" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الاستشارات المهنية للصحة</title>
+<meta name="description" content="خدمات استشارية للمهنيين الصحيين الأجانب: الاعتراف بالشهادات، التوجيه المهني، ونصائح للاندماج في سوق العمل الألماني.">
+<style>
+    :root {
+        --primary: #007BFF;
+        --bg: #f8f9fb;
+        --card-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    body {margin:0; font-family: Arial, sans-serif; background:var(--bg); color:#111;}
+    header {position:relative; text-align:center; color:#fff; overflow:hidden;}
+    header img {width:100%; height:70vh; object-fit:cover; display:block;}
+    header .overlay {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.45); z-index:1;}
+    header h1 {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2.4rem; z-index:2; margin:0; padding:0 1rem;}
+    @media (min-width:768px){ header h1 {font-size:3.2rem;} }
+    section {padding:60px 20px; max-width:1100px; margin:0 auto;}
+    section h2 {text-align:center; margin-bottom:40px;}
+    .services {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
+    .service {flex:1 1 300px; max-width:320px; text-align:center; border-radius:10px; overflow:hidden; background:#fff; box-shadow:var(--card-shadow);}    
+    .service img {width:100%; height:200px; object-fit:cover;}
+    .service p {padding:15px; margin:0;}
+    form {max-width:520px; margin:0 auto; display:flex; flex-direction:column; gap:12px;}
+    input, textarea, button {padding:12px; font-size:1rem; width:100%; box-sizing:border-box; border:1px solid #ddd; border-radius:6px;}
+    input:focus, textarea:focus {outline:none; border-color:var(--primary); box-shadow:0 0 0 3px rgba(0,123,255,0.12);}
+    button {background:var(--primary); color:white; border:none; cursor:pointer; border-radius:6px;}
+    button:hover {opacity:0.95;}
+    .muted {color:#666; font-size:0.95rem;}
+    footer {text-align:center; padding:20px; background:#fff; margin-top:30px; border-top:1px solid #eee;}
+    .success {display:none; text-align:center; padding:12px; background:#e6ffed; color:#0a7a2b; border:1px solid #c6f0d0; border-radius:6px;}
+</style>
+</head>
+<body>
+
+<header>
+    <!-- استخدمت رابط صورة صالح من Unsplash بدل الرابط المقطوع -->
+    <img src="https://images.unsplash.com/photo-1597764696641-7b5189c2b8e2?auto=format&fit=crop&w=1600&q=80" alt="فريق طبي يعمل معًا">
+    <div class="overlay" aria-hidden="true"></div>
+    <h1>الاستشارات المهنية للصحة</h1>
+</header>
+
+<section id="services">
+    <h2>خدماتنا</h2>
+    <div class="services" role="list">
+        <div class="service" role="listitem">
+            <img src="https://images.unsplash.com/photo-1581090700227-2e6e94d4fdb4?auto=format&fit=crop&w=800&q=80" alt="مستندات وشهادة">
+            <p>مساعدة في الاعتراف بالشهادات الصحية الأجنبية وإجراءات التقديم الرسمية.</p>
+        </div>
+        <div class="service" role="listitem">
+            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=800&q=80" alt="نصائح مهنية">
+            <p>تقديم نصائح عملية للنجاح في سوق العمل الألماني وكتابة السيرة الذاتية.</p>
+        </div>
+        <div class="service" role="listitem">
+            <img src="https://images.unsplash.com/photo-1588776822387-33f1d171c6c8?auto=format&fit=crop&w=800&q=80" alt="جلسة إرشاد مهني">
+            <p>توجيه مهني فردي للمتخصصين في الرعاية الصحية وتخطيط المسار الوظيفي.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>عن المستشار</h2>
+    <p>أنا مستشار مهني مختص بمساعدة المهنيين الصحيين الأجانب على الاعتراف بشهاداتهم والاندماج في سوق العمل الألماني. أقدّم جلسات إرشاد، مراجعة سير ذاتية، ومرافقة في إجراءات الاعتراف الرسمية.</p>
+</section>
+
+<section id="contact">
+    <h2>تواصل معنا</h2>
+
+    <div class="success" id="successMessage" role="status" aria-live="polite">تم إرسال رسالتك بنجاح — سنرد عليك خلال 48 ساعة.</div>
+
+    <!-- ضع action فعلي أو استخدم خدمة خارجية عند النشر -->
+    <form id="contactForm" method="post" action="#" novalidate>
+        <input type="text" name="name" placeholder="الاسم" aria-label="الاسم" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني" required>
+        <input type="text" name="subject" placeholder="الموضوع (اختياري)" aria-label="الموضوع">
+        <textarea name="message" placeholder="رسالتك" rows="5" aria-label="رسالتك" required></textarea>
+        <button type="submit">إرسال</button>
+        <p class="muted">أو راسلنا على: <a href="mailto:hamadahamza_2025@yahoo.com">hamadahamza_2025@yahoo.com</a></p>
+    </form>
+</section>
+
+<footer>
+    <p>حقوق الطبع والنشر &copy; 2025 جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    // تنفيذ إرسال عبر AJAX أو خدمة خارجية هنا
+    // حالياً نعرض رسالة نجاح تجريبية
+    document.getElementById('successMessage').style.display = 'block';
+    // مسح الحقول بعد الإرسال التجريبي
+    this.reset();
+});
+</script>
+
+</body>
+</html>
